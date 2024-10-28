@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Recipes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-recipe-item [recipe]="recipes[0]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
+  <app-recipe-item [recipe]="recipes[1]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
+  <app-recipe-item [recipe]="recipes[2]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
+</ion-content>
