@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { RecipeItemComponent } from 'src/app/components/recipe-item/recipe-item.component';
+import { RecipeItemComponentModule } from 'src/app/components/recipe-item/recipe-item.module';
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    RecipeItemComponentModule
   ],
   declarations: [HomePage]
 })
