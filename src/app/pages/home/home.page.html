@@ -4,10 +4,13 @@
       Recipes
     </ion-title>
   </ion-toolbar>
+  <ion-searchbar placeholder="Search Recipes" [(ngModel)]="searchTerm" (ionInput)="filterRecipes()"></ion-searchbar>
 </ion-header>
 
 <ion-content>
-  <app-recipe-item [recipe]="recipes[0]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
-  <app-recipe-item [recipe]="recipes[1]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
-  <app-recipe-item [recipe]="recipes[2]" (recipeClicked)="onRecipeClicked($event)"></app-recipe-item>
+  <app-recipe-item
+    *ngFor="let recipe of filteredRecipes"
+    [recipe]="recipe"
+    (recipeClicked)="onRecipeClicked($event)"
+    ></app-recipe-item>
 </ion-content>
